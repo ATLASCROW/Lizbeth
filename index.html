@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Día de la Mujer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffc0cb; /* Color de fondo rosa claro */
+            color: #333;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .destacado {
+            font-size: 48px;
+            color: #ff007f;
+            font-weight: bold;
+        }
+        #corazon {
+            font-size: 48px;
+            color: red;
+            animation: pulse 1s infinite alternate; /* Animación del corazón */
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .content {
+            max-width: 600px;
+            padding: 20px;
+            background-color: white; /* Fondo blanco del contenido */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+        button {
+            background-color: white;
+            color: white;
+            border: none;
+            padding: 4px 5px;
+            font-size: 1px;
+            border-radius: 1px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div id="corazon">❤</div>
+            <h1>Feliz Día de la Mujer</h1>
+            <p><span class="destacado">¡Lizbeth!</span></p>
+            <button id="mostrarMensaje"></button>
+            <p id="otroMensaje" style="display: none;">Besos en la frente.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("mostrarMensaje").addEventListener("click", function() {
+            document.getElementById("otroMensaje").style.display = "block";
+        });
+    </script>
+</body>
+</html>
